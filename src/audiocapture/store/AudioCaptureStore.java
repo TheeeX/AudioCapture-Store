@@ -34,13 +34,15 @@ public class AudioCaptureStore {
     MediaLocator file = null;
     URL url = null;
         try {
-            url = new URL("file", null, "clap.wav");
+            url = new URL("file", null, "output.wav");
         } catch (MalformedURLException ex) {
             Logger.getLogger(AudioCaptureStore.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("wtf!");
         }
         try{
             file = new MediaLocator(url);
         } catch(Exception ex){
+            System.out.println("wtf!");
         }
     
     DataSink ds = null;
